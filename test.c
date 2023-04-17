@@ -13,7 +13,7 @@ int main(void) {
     int status;
 
     while (1) {
-        printf("$ ");
+        printf("#cisfun$ ");
         fgets(buffer, BUFFER_SIZE, stdin);
         
         if (feof(stdin)) {
@@ -29,13 +29,10 @@ int main(void) {
                 command = strtok(buffer, " ");
 
             if (execve(command, &command, NULL) == -1) {
-                printf("simple_shell: %s: command not found\n", command);
+                printf("./hsh: No such file or directory\n");
                 exit(1);
             }
-        } else if (pid < 0) {
-            printf("simple_shell: fork failed\n");
-            exit(1);
-        } else {
+        }else {
             waitpid(pid, &status, 0);
         }
     }
