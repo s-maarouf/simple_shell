@@ -1,38 +1,27 @@
 #include "shell.h"
 
 /**
-  * _handle_exit - ...
-  * @u_tokns: ...
-  * @line: ...
-  *
-  * Return: Nothing
-  */
+ * _handle_exit - ...
+ * @u_tokns: ...
+ * @line: ...
+ *
+ * Return: Nothing
+ */
 void _handle_exit(char **u_tokns, char *line)
 {
-	int status = 0;
+	int exit_status = 0;
 
-	if (u_tokns[1] == NULL || (!_strcmp(u_tokns[1], "0")))
+	if (u_tokns[1] != NULL)
 	{
-		frees_tokens(u_tokns);
-		free(line);
-		exit(0);
-	}
-	status = _atoi(u_tokns[1]);
-	if (status != 0)
-	{
-		frees_tokens(u_tokns);
-		free(line);
-		exit(status);
-	}
-	else
-	{
-		_puts("exit: Illegal number: ");
-		_puts(u_tokns[1]);
-		_puts("\n");
-		exit(2);
+		exit_status = atoi(u_tokns[1]);
+		if (exit_status == 0 && strcmp(u_tokns[1], "0") != 0)
+		{
+			printf("exit: %s: numeric argument required\n", u_tokns[1]);
+			return;
+		}
 	}
 
-	frees_tokens(u_tokns);
 	free(line);
-	exit(EXIT_SUCCESS);
+	frees_tokens(u_tokns);
+	exit(exit_status);
 }
