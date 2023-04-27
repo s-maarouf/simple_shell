@@ -5,6 +5,7 @@
  *
  * @input: input string
  * @i: index
+ *
  * Return: repetitions
  */
 int repeated_char(char *input, int i)
@@ -21,8 +22,8 @@ int repeated_char(char *input, int i)
  * @input: input string
  * @i: index
  * @last: last char read
- * Return: index of error. 0 when there are no
- * errors
+ *
+ * Return: index of error. 0 when there are no errors
  */
 int error_sep_op(char *input, int i, char last)
 {
@@ -73,6 +74,7 @@ int error_sep_op(char *input, int i, char last)
  *
  * @input: input string
  * @i: index
+ *
  * Return: 1 if there is an error. 0 in other case.
  */
 int first_char(char *input, int *i)
@@ -99,6 +101,7 @@ int first_char(char *input, int *i)
  * @input: input string
  * @i: index of the error
  * @bool: to control msg error
+ *
  * Return: no return
  */
 void print_syntax_error(data_shell *datash, char *input, int i, int bool)
@@ -147,10 +150,11 @@ void print_syntax_error(data_shell *datash, char *input, int i, int bool)
 
 /**
  * check_syntax_error - intermediate function to
- * find and print a syntax error
+ *					find and print a syntax error
  *
  * @datash: data structure
  * @input: input string
+ *
  * Return: 1 if there is an error. 0 in other case
  */
 int check_syntax_error(data_shell *datash, char *input)

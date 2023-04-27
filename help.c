@@ -2,6 +2,7 @@
 
 /**
  * aux_help_env - Help information for the builtin env
+ *
  * Return: no return
  */
 void aux_help_env(void)
@@ -15,6 +16,7 @@ void aux_help_env(void)
 }
 /**
  * aux_help_setenv - Help information for the builtin setenv
+ *
  * Return: no return
  */
 void aux_help_setenv(void)
@@ -30,6 +32,7 @@ void aux_help_setenv(void)
 }
 /**
  * aux_help_unsetenv - Help information for the builtin unsetenv
+ *
  * Return: no return
  */
 void aux_help_unsetenv(void)
@@ -44,6 +47,7 @@ void aux_help_unsetenv(void)
 
 /**
  * aux_help_general - Entry point for help information for the help builtin
+ *
  * Return: no return
  */
 void aux_help_general(void)
@@ -66,6 +70,7 @@ void aux_help_general(void)
 }
 /**
  * aux_help_exit - Help information fot the builint exit
+ *
  * Return: no return
  */
 void aux_help_exit(void)

@@ -56,6 +56,7 @@ void cd_dot(data_shell *datash)
  * by the user
  *
  * @datash: data relevant (directories)
+ *
  * Return: no return
  */
 void cd_to(data_shell *datash)

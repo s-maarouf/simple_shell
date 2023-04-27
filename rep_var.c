@@ -6,6 +6,7 @@
  * @h: head of linked list
  * @in: input string
  * @data: data structure
+ *
  * Return: no return
  */
 void check_env(r_var **h, char *in, data_shell *data)
@@ -48,6 +49,7 @@ void check_env(r_var **h, char *in, data_shell *data)
  * @in: input string
  * @st: last status of the Shell
  * @data: data structure
+ *
  * Return: no return
  */
 int check_vars(r_var **h, char *in, char *st, data_shell *data)
@@ -90,6 +92,7 @@ int check_vars(r_var **h, char *in, char *st, data_shell *data)
  * @input: input string
  * @new_input: new input string (replaced)
  * @nlen: new length
+ *
  * Return: replaced string
  */
 char *replaced_input(r_var **head, char *input, char *new_input, int nlen)
@@ -140,6 +143,7 @@ char *replaced_input(r_var **head, char *input, char *new_input, int nlen)
  *
  * @input: input string
  * @datash: data structure
+ *
  * Return: replaced string
  */
 char *rep_var(char *input, data_shell *datash)
