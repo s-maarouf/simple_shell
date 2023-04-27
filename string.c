@@ -139,7 +139,6 @@ char **strbrk(char *line, char c)
 			tmp = realloc(array, sizeof(*array) * (i + 4));
 			if (tmp == NULL)
 			{
-				perror("Couldn't Reallocate");
 				return (NULL);
 			}
 			else
